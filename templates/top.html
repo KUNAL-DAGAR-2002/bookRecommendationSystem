@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block title %}Top 50|{% endblock title %}
+{% block body %}
+
+<h1 style="text-align: center;">Top 50 Collection</h1>
+<div class="container">
+<div class="container">
+<div class="container">
+{% for i in range(0,length,5) %}
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col"></th>
+      <th scope="col"><img src="{{img[i]}}" alt="{{book_name[i]}}"></th>
+      <th scope="col"><img src="{{img[i+1]}}" alt="{{book_name[i+1]}}"></th>
+      <th scope="col"><img src="{{img[i+2]}}" alt="{{book_name[i+2]}}"></th>
+      <th scope="col"><img src="{{img[i+3]}}" alt="{{book_name[i+3]}}"></th>
+      <th scope="col"><img src="{{img[i+4]}}" alt="{{book_name[i+4]}}"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Book Name</td>
+      <td>{{book_name[i]}}</td>
+      <td>{{book_name[i+1]}}</td>
+      <td>{{book_name[i+2]}}</td>
+      <td>{{book_name[i+3]}}</td>
+      <td>{{book_name[i+4]}}</td>
+    </tr>
+    <tr>
+      <td>Votes</td>
+      <td>{{votes[i]}}</td>
+      <td>{{votes[i+1]}}</td>
+      <td>{{votes[i+2]}}</td>
+      <td>{{votes[i+3]}}</td>
+      <td>{{votes[i+4]}}</td>
+    </tr>
+    <tr>
+      <td>Ratings</td>
+      <td>{{ratings[i]}}⭐</td>
+      <td>{{ratings[i+2]}}⭐</td>
+      <td>{{ratings[i+1]}}⭐</td>
+      <td>{{ratings[i+3]}}⭐</td>
+      <td>{{ratings[i+4]}}⭐</td>
+    </tr>
+    <tr>
+      <td>Author</td>
+      <td>{{author[i]}}</td>
+      <td>{{author[i+1]}}</td>
+      <td>{{author[i+2]}}</td>
+      <td>{{author[i+3]}}</td>
+      <td>{{author[i+4]}}</td>
+    </tr>
+    <tr>
+      <td>Year of Publish</td>
+      <td>{{year[i]}}</td>
+      <td>{{year[i+1]}}</td>
+      <td>{{year[i+2]}}</td>
+      <td>{{year[i+3]}}</td>
+      <td>{{year[i+4]}}</td>
+    </tr>
+    <tr>
+      <td>Publisher</td>
+      <td>{{publisher[i]}}</td>
+      <td>{{publisher[i+1]}}</td>
+      <td>{{publisher[i+2]}}</td>
+      <td>{{publisher[i+3]}}</td>
+      <td>{{publisher[i+4]}}</td>
+    </tr>
+  </tbody>
+</table>
+{% endfor %}
+</div>
+</div>
+</div>
+{% endblock body %}

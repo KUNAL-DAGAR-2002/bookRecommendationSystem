@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% block title %}Recommendations|{% endblock title %}
+{% block body %}
+{% if length==0 %}
+<h1 style="text-align: center; margin-top:4rem !important; margin-bottom:8rem !important">{{message}}</h1>
+{% endif %}
+{% if length>0 %}
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            {% for i in range(0,length,1) %}
+            <th scope="col"><img src="{{img[i]}}" alt="{{book_name[i]}}"></th>
+            {% endfor %}
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Book Name</td>
+            {% for i in range(0,length,1) %}
+            <td>{{book_name[i]}}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>Author</td>
+            {% for i in range(0,length,1) %}
+            <td>{{author[i]}}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>Year</td>
+            {% for i in range(0,length,1) %}
+            <td>{{year[i]}}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td>Publisher</td>
+            {% for i in range(0,length,1) %}
+            <td>{{publisher[i]}}</td>
+            {% endfor %}
+          </tr>
+        </tbody>
+      </table>
+{% endif %}
+  
+{% endblock body %}

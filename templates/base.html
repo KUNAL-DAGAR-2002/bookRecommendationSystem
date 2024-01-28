@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% endblock title %}Book Recommendation System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <style>
+    .footer{
+      text-align: center;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: rgb(23, 22, 22);
+      color: #ffff;
+      font-size: 2.9rem;
+      font-weight: bold;
+    }
+    .navbar{
+      padding-top: 1rem !important;
+      padding-bottom: 1rem !important;
+      color: #ffffff !important;
+      background-color:rgb(23, 22, 22) !important;
+    }
+    .navbar-brand {
+      color: #ffffff;
+      font-size: 1.5rem !important;
+      font-weight: bold !important;
+      }
+
+      .navbar-brand:hover{
+        color: #ffffff;
+      }
+
+    .content{
+      margin-top: 2rem;
+    }
+  </style>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">Book Recommendation System</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              
+              
+            </ul>
+            <form class="d-flex" action="/recommend" method="post">
+                <input class="form-control me-2" name="recommend" type="text" placeholder="Get Recommendations" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Recommend</button>
+            </form>
+            
+          </div>
+        </div>
+      </nav>
+
+      <div class="container text-center content">
+        <div class="row">
+          <div class="col">
+            <form action="/top50" method="post">
+            <button class="btn btn-primary" type="submit">Top 50 Books</button>
+            </form>
+          </div>
+          
+          <div class="col">
+            <form class="d-flex" action="/topAuthors" method="post">
+              <div class="form-group mx-sm-3 mb-2">
+                
+                <input type="text" class="form-control" name="author" id="inputPassword2" placeholder="Enter Full author Name">
+              </div>
+              <button type="submit" class="btn btn-danger mb-2">Get Books</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    {% block body %} {% endblock body %}
+    <footer class="footer">
+      Developed by - Kunal Dagar 
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+  </body>
+</html>
