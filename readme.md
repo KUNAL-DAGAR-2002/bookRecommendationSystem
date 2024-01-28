@@ -15,7 +15,7 @@ This web app is designed to provide personalized book recommendations based on a
 ### Personalized Recommendations
 
 - **Endpoint:** `/recommend/{book_name}`
-- **Description:** Get personalized book recommendations based on the provided book name.
+- **Description:** Get personalized book recommendations based on the provided book name based on Euclidean distance.
 
 ### Filter by Author
 
@@ -25,7 +25,7 @@ This web app is designed to provide personalized book recommendations based on a
 ### Top 50 Books
 
 - **Endpoint:** `/top_50`
-- **Description:** Retrieve a list of the top 50 books based on certain criteria.
+- **Description:** Retrieve a list of the top 50 books based on certain criteria based on number of votes and ratings.
 
 ### Top 100 Books (Index Page)
 
